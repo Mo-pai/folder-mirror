@@ -1,0 +1,22 @@
+# 默认由 Git 自动判断文本/二进制，并统一在仓库内使用 LF 存储
+* text=auto
+
+# ---------------------------------------------------------------------------
+# .bat 文件必须保持 GBK + CRLF 才能被 cmd.exe 正确解析
+# 	working-tree-encoding: 工作区用 GBK，仓库内存 UTF-8 ——
+# 	这样 GitHub 网页上显示、diff 都是正常中文，本地双击也能跑。
+# 	注意：本地编辑前请先 `git add` 已暂存内容，避免编码转换冲突。
+# ---------------------------------------------------------------------------
+*.bat text working-tree-encoding=GBK eol=crlf
+
+# 显式声明，避免跨平台换行符漂移
+*.py  text eol=lf
+*.md  text eol=lf
+*.json text eol=lf
+*.gitignore text eol=lf
+
+# 二进制
+*.png binary
+*.jpg binary
+*.ico binary
+*.exe binary

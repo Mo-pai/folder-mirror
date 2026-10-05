@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "tasks": [
+    {
+      "name": "教学资料备份",
+      "src": "D:\\教学资料",
+      "dst": "E:\\备份\\教学资料",
+      "delete": false,
+      "poll": false,
+      "no_default_exclude": false,
+      "autostart": false,
+      "debounce": 1.5,
+      "max_delay": 10.0,
+      "interval": 600.0,
+      "excludes": [
+        "*.bak",
+        "*.iso",
+        "素材"
+      ],
+      "id": "example_1"
+    }
+  ]
+}
